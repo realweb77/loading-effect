@@ -1,0 +1,48 @@
+/* Basic reset aur full-screen centering */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Dark background */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container ko center karne ke liye */
+.loader-container {
+    text-align: center;
+}
+
+/* Spinning Circle ka design */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #333; /* Background ring color */
+    border-top: 6px solid #00d2ff; /* Spinning ring color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px auto; /* Text se thoda space dene ke liye */
+}
+
+/* Loading text ka design aur animation */
+.loading-text {
+    color: #00d2ff;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Spinner ki animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Text ki pulsing animation */
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
